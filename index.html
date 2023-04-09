@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="images/icons/eg-logo.svg"
+      type="image/x-icon"
+    />
+    <title>EnGame Platformasi</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+  </head>
+  <body id="loginBg">
+    <section id="login">
+      <div class="container">
+        <div class="validate-message none"></div>
+        <div class="login-form">
+          <i class="fa-solid fa-user" style="color: #fff"></i>
+          <form action="#" id="form">
+            <div class="firstname">
+              <i class="fa-solid fa-user"></i>
+              <input
+                type="text"
+                name="firstname"
+                class="first-name"
+                placeholder="Ismingizni kiriting"
+              />
+              <i class="fa-solid fa-circle-exclamation error"></i>
+            </div>
+            <div class="password">
+              <i class="fa-solid fa-lock"></i>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password here"
+              />
+              <i class="fa-sharp fa-solid fa-eye-slash" id="eyeicon"></i>
+              <i class="fa-solid fa-eye" id="eyeicon-show"></i>
+              <i class="fa-solid fa-circle-exclamation error"></i>
+            </div>
+            <button class="btn" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+    <script src="./js/three.r134.min.js"></script>
+    <script src="./js/vanta.halo.min.js"></script>
+    <script src="./js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,180 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.levels-div {
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+}
+
+.levels-title {
+    font-size: 40px;
+    padding-bottom: 100px;
+}
+
+.levels h3 {
+    font-weight: 500;
+    font-size: 20px;
+    text-shadow: #fff 0.063em 0 0.313em;
+}
+
+.levels-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.level {
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    padding: 5px 30px 5px 5px;
+    gap: 15px;
+    border: 4px solid transparent;
+    cursor: pointer;
+}
+
+.level-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+.level-title {
+    color: #fff;
+    font-weight: 600;
+}
+
+.first-level {
+    background-color: #04ff00;
+}
+
+.first-level.active {
+    border-color: #14d711;
+}
+
+.first-level .level-num {
+    color: #04ff00;
+}
+
+.second-level {
+    background-color: #ffd500;
+}
+
+.second-level.active {
+    border-color: #cdab04;
+}
+
+.second-level .level-num {
+    color: #ffd500;
+}
+
+.third-level {
+    background-color: #f7372c;
+}
+
+.third-level.active {
+    border-color: #cf140a;
+}
+
+.third-level .level-num {
+    color: #f7372c;
+}
+
+.start-game-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.563em;
+}
+
+.start-neon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+    font-size: 25px;
+    font-weight: 600;
+    border: none;
+    color: #ffdd32;
+    background-color: #fcfcfc;
+    text-transform: capitalize;
+    box-shadow: 0 0 1.3em #ffdd3277;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+
+.start-neon span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.3em;
+    background: linear-gradient(to right, transparent, #ffdd32);
+    animation: animate1 1.25s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+}
+
+.start-neon span:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 0.3em;
+    background: linear-gradient(to left, transparent, #ffdd32);
+    animation: animate2 1.25s linear infinite;         
+}
+      
+@keyframes animate2 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
+
+.start-neon:hover {
+  color: #fff;
+  background: #ffdd32;
+  box-shadow: 0 0 0.625em #ffdd32,
+              0 0 1.5em #ffdd32,
+              0 0 1em #ffdd32;
+  transition-delay: .1s;
+}
+
+.start-neon:hover span,
+.start-neon:focus span,
+.start-neon:active span {
+  animation-play-state: paused;
+}
+
+@media screen and (max-width:530px) {
+    .levels-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
